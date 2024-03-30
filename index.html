@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Obyek 3D dengan A-Frame</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Objek Pertama: Kubus Merah -->
+    <a-box position="-4 1 -7" color="red" scale="2 2 2" rotation="45 30 0"></a-box>
+    
+    <!-- Objek Kedua: Bola Hijau -->
+    <a-sphere position="0 1 -11" color="green" radius="1.5" material="metalness: 0.5;"></a-sphere>
+    
+    <!-- Objek Ketiga: Silinder Biru -->
+    <a-cylinder position="4 1 -7" color="blue" radius="1" height="3" rotation="0 45 0"></a-cylinder>
+    
+    <!-- Objek Keempat: Kerucut Kuning -->
+    <a-cone position="-4 1 -3" color="yellow" radius-bottom="1" radius-top="0.5" height="2" rotation="0 90 0"></a-cone>
+    
+    <!-- Objek Kelima: Torus Ungu -->
+    <a-torus position="4 1 -11" color="purple" radius="1" radius-tubular="0.2" rotation="0 30 0"></a-torus>
+   <!-- Teks: Nama di pojok kanan atas -->
+  <a-entity position="8 5 -5">
+    <a-text value="ADELIA OKTAVIANI SARI" color="black" scale="3 3 3" align="right"></a-text>
+  </a-entity>
+
+  <!-- Teks: NPM di pojok kanan atas -->
+  <a-entity position="8 4 -5">
+    <a-text value="NPM 2113025002" color="black" scale="3 3 3" align="right"></a-text>
+  </a-entity>
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+
+    
+</body>
+</html>
