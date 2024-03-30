@@ -1,0 +1,2 @@
+5 OBJEK 3D MENGGUNAKAN A FRAME PRIMITIVES,
+Projek ini adalah sebuah contoh penggunaan teknologi A-Frame dalam pembuatan lingkungan 3D di halaman web. Teknologi A-Frame merupakan sebuah framework untuk membangun pengalaman realitas virtual (VR) dan realitas augmentasi (AR) yang dibuat menggunakan HTML dan WebGL. Dalam proyek ini, kita menggunakan A-Frame untuk membuat lingkungan 3D yang terdiri dari beberapa objek dengan variasi warna, bentuk, dan posisi.
