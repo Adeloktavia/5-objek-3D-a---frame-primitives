@@ -3,9 +3,15 @@
 <head>
   <title>Obyek 3D dengan A-Frame</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
 </head>
 <body>
-  <a-scene>
+  <body style="margin : 0px; overflow: hidden;">
+    <!-- embedded vr-mode-ui="enabled: false" adalah untuk menonaktifkan tombol VR (stereocospic view) -->
+    <!-- debugUIEnabled: false adalah untuk menonaktifkan UI untuk debugging (true hanya untuk troubleshooting) -->
+    <a-scene embedded vr-mode-ui="enabled: false" arjs="debugUIEnabled: false;">
+        <!-- a-marker-camera membuat obyek tetap ada walau marker tidak terlihat -->
+        <a-marker-camera preset="hiro">
     <!-- Objek Pertama: Kubus Merah -->
     <a-box position="-4 1 -7" color="red" scale="2 2 2" rotation="45 30 0"></a-box>
     
@@ -20,18 +26,13 @@
     
     <!-- Objek Kelima: Torus Ungu -->
     <a-torus position="4 1 -11" color="purple" radius="1" radius-tubular="0.2" rotation="0 30 0"></a-torus>
-   <!-- Teks: Nama di pojok kanan atas -->
-  <a-entity position="8 5 -5">
-    <a-text value="ADELIA OKTAVIANI SARI" color="black" scale="3 3 3" align="right"></a-text>
-  </a-entity>
-
-  <!-- Teks: NPM di pojok kanan atas -->
-  <a-entity position="8 4 -5">
-    <a-text value="NPM 2113025002" color="black" scale="3 3 3" align="right"></a-text>
-  </a-entity>
-    <a-sky color="#ECECEC"></a-sky>
-  </a-scene>
-
-    
+   
+        </a-marker-camera>
+<!-- Kamera AR -->
+        <a-entity camera arjs-anchor look-controls></a-entity>
+    </a-scene>
+    <!-- referensi: https://github.com/jeromeetienne/AR.js/issues/159 -->
 </body>
+ 
+  
 </html>
